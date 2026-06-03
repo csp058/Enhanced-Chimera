@@ -21,11 +21,12 @@ To run this simulator successfully, the following software environment is requir
 
 ## Repository Structure
 Ensure all the following files are located in the same working directory before execution:
-- `Enhanced_Chimera.m` : The main execution script containing the end-to-end simulation pipeline.
+- `Main_Enhanced_Chimera.m` : The main execution script containing the end-to-end simulation pipeline.
 - `gpsNavigationConfig.m` : A lightweight, custom configuration class optimized specifically for CNAV-2 (L1C) parameters.
 - `gpsNAVDataEncode.m` : A custom encoder modified to output both the fully encoded 1800-bit frame and 
 the pure, raw navigation subframes (SF1, SF2, SF3) for backward-compatible MAC generation.
 - `L1CLDPCParityCheckMatrices.mat` : A mandatory data file containing the sparse parity-check matrices (A1, B1, C1, E1, T1, etc.) defined in IS-GPS-800j for LDPC error correction.
+- 'MATLAB Output (Enhanced Chimera).pdf' : Output result of executing 'Main_Enhanced_Chimera.m' script. 
 
 ## Usage & Precautions
 1. Execution Time: The simulation processes the signal chip-by-chip and symbol-by-symbol through a closed-loop PLL, followed by intensive LDPC and Viterbi decoding. Depending on your CPU specifications, the execution may take a few moments.
